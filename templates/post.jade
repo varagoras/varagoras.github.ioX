@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Varagoras</title>
+    <link href="/assets/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <section id="wrap" class="cnt">
+      <header>
+        <h1><a href="/">Varagoras</a></h1>
+      </header>
+      <section id="main">
+        <article class="item">
+          <header>
+            <time datetime="2015-05-03 00:00">2015.05.03
+            </time>
+            <h1><a href="/undefined"></a></h1>
+          </header>
+          <div class="entry">extends layout
+
+block main
+  article.item
+    header
+      time(datetime=moment(date).format("YYYY-MM-DD 00:00")) #{moment(date).format("YYYY.MM.DD")}
+        if modifyDate && moment(date).isBefore(updateDate)
+          span (Updated #{moment(updateDate).format("YYYY.MM.DD")})
+      h1
+        a(href='/'+path)= title
+    div.entry!= contents
+
+    if previous || next
+      footer
+        if previous
+          a(href='/'+previous.path) Previous
+        if next
+          a(href='/'+next.path) Next</div>
+        </article>
+      </section>
+    </section>
+    <script src="//localhost:35729/livereload.js"></script>
+  </body>
+</html>

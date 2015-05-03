@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    block head
+      block title
+        title= title ? title + " | " + site.title : site.title
+      block styles
+        link(href='/assets/style.css', rel='stylesheet')
+  body
+    section#wrap.cnt
+      header
+        h1
+          a(href="/") Varagoras
+      block body
+        section#main
+          block main
+
+    script(src="//localhost:35729/livereload.js")

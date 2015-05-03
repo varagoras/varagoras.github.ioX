@@ -1,0 +1,18 @@
+extends layout
+
+block main
+  article.item
+    header
+      time(datetime=moment(date).format("YYYY-MM-DD 00:00")) #{moment(date).format("YYYY.MMM #"+id)}
+        if modifyDate && moment(date).isBefore(updateDate)
+          span (Updated #{moment(updateDate).format("YYYY.MMM.DD")})
+      h1
+        a(href='/'+path)= title
+    div.entry!= contents
+
+    if previous || next
+      footer
+        if previous
+          a(href='/'+previous.path)= 'Previous: ' + previous.title
+        if next
+          a(href='/'+next.path)= 'Next: ' + next.title

@@ -1,0 +1,15 @@
+extends layout
+
+block main
+  #posts
+    if collections.posts && collections.posts.length > 0
+        each post in collections.posts
+            h2
+                a(href='/'+post.path)!= post.title
+                if post.date
+                    small
+                        time(datetime=moment(post.date).format("YYYY-MM-DD 00:00")) #{moment(post.date).format("YYYY#"+post.id)}
+            div!= (post.desc || post.excerpt)
+    else
+        h2= collections.posts.length
+        div No posts
