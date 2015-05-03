@@ -3,7 +3,7 @@
   "description": "-",
   "main": "boot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "basscss": "^6.0.2",
+    "buildbranch": "0.0.3",
     "handlebars": "^3.0.3",
     "jade": "^1.9.2",
     "metalsmith": "^1.7.0",
