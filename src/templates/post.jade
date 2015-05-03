@@ -13,6 +13,6 @@ block main
     if previous || next
       footer
         if previous
-          a(href='/'+previous.path)= 'Previous: ' + previous.title
+          a(href='/'+previous.path)= 'Newer: ' + previous.title
         if next
-          a(href='/'+next.path)= 'Next: ' + next.title
+          a(href='/'+next.path)= 'Older: ' + next.title
