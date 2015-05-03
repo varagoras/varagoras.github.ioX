@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Pipelining | Varagoras</title>
+    <link href="/assets/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <section id="wrap" class="cnt">
+      <header>
+        <h1><a href="/">Varagoras</a></h1>
+      </header>
+      <section id="main">
+        <article class="item">
+          <header>
+            <time datetime="2015-05-03 00:00">2015.May #3
+            </time>
+            <h1><a href="/posts/2015/css-pipelining">CSS Pipelining</a></h1>
+          </header>
+          <div class="entry"><h2 id="thinking"><a class="heading-anchor" href="#thinking"><span></span></a>Thinking</h2>
+<ul>
+<li>Maintenability (consise code, well organized)</li>
+<li>Decoupled/Layered solutions</li>
+<li>Slim modules</li>
+</ul>
+<h2 id="state"><a class="heading-anchor" href="#state"><span></span></a>State</h2>
+<ul>
+<li>Browser feature support (until next-gen browsers with proper updating)<ul>
+<li>Future feature/syntax transpilers <a href="http://www.myth.io">Myth</a>, <a href="https://cssnext.github.io">cssnext</a> etc.</li>
+</ul>
+</li>
+<li>Verbose/Lacking CSS syntax<ul>
+<li>CSS pre-processor like <a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org">LESS</a>, <a href="https://learnboost.github.io/stylus">Stylus</a> etc.</li>
+</ul>
+</li>
+</ul>
+<h2 id="plan"><a class="heading-anchor" href="#plan"><span></span></a>Plan</h2>
+<p>Priority usage of future features (via traspiler) instead of custom pre-processor code.
+Use a pre-processor for all the extra features a transpiler can&apos;t provide.
+Generate a plain CSS and let the traspiler handle as much as possible like browser prefixes etc.</p>
+<h2 id="currently"><a class="heading-anchor" href="#currently"><span></span></a>Currently</h2>
+<p><strong>Sass</strong> &#x2192; <strong>Myth</strong> &#x2192; <strong>Uglify</strong></p>
+</div>
+          <footer><a href="/posts/2015/hello">Older: Hello world</a>
+          </footer>
+        </article>
+      </section>
+    </section>
+    <script src="//localhost:35729/livereload.js"></script>
+  </body>
+</html>
